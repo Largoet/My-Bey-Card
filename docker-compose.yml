@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgres:16
+    container_name: beycard_db
+    environment:
+      POSTGRES_USER: beycard
+      POSTGRES_PASSWORD: beycard
+      POSTGRES_DB: beycard
+    ports: ["5432:5432"]
+    volumes: ["./db/pgdata:/var/lib/postgresql/data"]
+
+  adminer:
+    image: adminer
+    container_name: beycard_adminer
+    restart: always
+    ports: ["8080:8080"]

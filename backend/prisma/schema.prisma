@@ -1,0 +1,85 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id_discord String   @id
+  username   String
+  avatar_url String?
+  photo_url  String?
+  bio        String?
+  fav_deck   String?
+  xp_total   Int      @default(0)
+  wins       Int      @default(0)
+  losses     Int      @default(0)
+  created_at DateTime @default(now())
+
+  cards      Card[]
+  matchesA   Match[]     @relation("MatchesAsA")
+  matchesB   Match[]     @relation("MatchesAsB")
+  matchesWon Match[]     @relation("MatchesWinner")
+  userBadges UserBadge[]
+  matches    Match[]
+}
+
+model Card {
+  card_id   String   @id @default(uuid())
+  owner_id  String
+  linked_at DateTime @default(now())
+
+  owner User @relation(fields: [owner_id], references: [id_discord])
+
+  @@index([owner_id])
+}
+
+model Match {
+  id            String    @id @default(uuid())
+  player_a_id   String
+  player_b_id   String
+  winner_id     String?
+  xp_awarded_a  Int       @default(0)
+  xp_awarded_b  Int       @default(0)
+  created_by_id String
+  validated_at  DateTime?
+  created_at    DateTime  @default(now())
+
+  playerA   User  @relation("MatchesAsA", fields: [player_a_id], references: [id_discord])
+  playerB   User  @relation("MatchesAsB", fields: [player_b_id], references: [id_discord])
+  winner    User? @relation("MatchesWinner", fields: [winner_id], references: [id_discord])
+  createdBy User  @relation(fields: [created_by_id], references: [id_discord])
+
+  @@index([player_a_id])
+  @@index([player_b_id])
+  @@index([winner_id])
+  @@index([created_by_id])
+}
+
+model Badge {
+  id       String  @id @default(uuid())
+  slug     String  @unique
+  name     String
+  rule     Json
+  icon_url String?
+  active   Boolean @default(true)
+
+  awarded UserBadge[]
+}
+
+model UserBadge {
+  id         String   @id @default(uuid())
+  user_id    String
+  badge_id   String
+  awarded_at DateTime @default(now())
+
+  user  User  @relation(fields: [user_id], references: [id_discord])
+  badge Badge @relation(fields: [badge_id], references: [id])
+
+  @@unique([user_id, badge_id])
+  @@index([user_id])
+  @@index([badge_id])
+}
