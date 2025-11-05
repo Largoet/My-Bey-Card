@@ -28,7 +28,7 @@ Cette version cherche à répondre à un besoin **essentiel et concret** :
 ### Fonctionnalités incluses :
 - Connexion via **Discord OAuth2** (pas de mot de passe à créer).  
 - **Profil joueur** avec :
-  - photo de profil,
+  - photo de profil discord,
   - bio et deck préféré,  
   - barre d’XP et niveau,  
   - ratio victoires/défaites.  
@@ -59,7 +59,7 @@ L’objectif n’est pas de sortir une app parfaite, mais une **base fonctionnel
 
 ### 👤 Profil joueur
 - Connexion avec Discord.  
-- Photo de profil (avatar Discord ou image par défaut homme/femme).  
+- Photo de profil.  
 - Bio personnalisable.  
 - Deck préféré.  
 - Barre d’XP avec niveau.  
