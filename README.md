@@ -97,9 +97,9 @@ Un premier système de **badges automatiques** est inclus pour motiver la progre
 ### Badges disponibles :
 | Type | Niveaux |
 |------|----------|
-| Victoires | 10 / 50 |
-| Matchs joués | 20 / 100 |
-| XP cumulée | 500 / 1500 |
+| Victoires | 10 / 50 /100 |
+| Matchs joués | 10 / 25 / 50 / 100 |
+| XP cumulée | 100 / 500 / 1000|
 | Premier combat | 1 |
 
 Pas encore d’effets visuels ou de cosmétiques (cadres d’avatar, bannières).  
@@ -168,7 +168,7 @@ Publication automatique du classement hebdomadaire dans `#classements`.
 
 ## 🧮 XP & Niveaux
 
-- Base XP : victoire +10 / défaite +3  
+- Base XP : victoire +10 / défaite +5  
 - Passage de niveau tous les **100 XP**  
 - Niveau affiché sur le profil et dans `/rank`  
 - Pas d’XP dégressive en BETA (trop peu de joueurs pour l’instant)
