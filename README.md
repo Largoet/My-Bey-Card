@@ -6,7 +6,7 @@
 
 ## 🎯 Présentation & Objectif
 
-La communauté Beyblade nantaise est en pleine formation : il n’existe pas encore de structure officielle pour suivre les joueurs, leurs matchs ou leurs classements.  
+La communauté Beyblade nantaise étant en formation : il n’existe pas encore de structure officielle pour suivre les joueurs, leurs matchs ou leurs classements.  
 Le projet **BeyCard** est né de cette envie collective de créer un **outil pratique et ludique**, qui rende nos rencontres **plus immersives et organisées**.
 
 L’idée est simple :  
