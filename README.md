@@ -1,4 +1,4 @@
-# 🧪 BeyCard BETA – Beyblade Nantes
+# 🪪 My Bey Card BETA – Beyblade Nantes
 
 > _Une BETA communautaire pour poser les bases d’un système simple, moderne et amusant pour les joueurs Beyblade à Nantes._
 
