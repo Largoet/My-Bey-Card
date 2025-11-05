@@ -118,6 +118,29 @@ Commandes disponibles :
 Publication automatique du classement hebdomadaire dans `#classements`.
 
 ---
+---
+
+## 🔐 Accès restreint à la BETA (invitation Discord uniquement)
+
+Pour préserver l’esprit communautaire et éviter l’accès public pendant la phase de test, **l’application web n’est accessible que via invitation Discord**.  
+Cela garantit que seuls les joueurs réellement impliqués dans la communauté Beyblade Nantes peuvent créer un profil et participer aux premiers matchs.
+
+### Fonctionnement
+- L’inscription ne se fait **que via Discord OAuth2** (aucun compte manuel).  
+- Lors de la première connexion, l’utilisateur doit :
+  1. Être **membre du serveur Discord Beyblade Nantes**,  
+  2. Cliquer sur une **URL d’invitation unique** générée par un membre ou un staff.  
+- L’invitation est à **usage unique** et **expire après quelques jours**.  
+- Une fois validée, le joueur accède à son profil et son **QR code personnel** est généré automatiquement.
+
+### Sécurité et confidentialité
+- L’app ne sera **pas référencée** sur les moteurs de recherche (`noindex, nofollow`).  
+- Les pages publiques sont limitées à une simple **page d’accueil “Communauté privée”**.  
+- Le bot Discord peut créer des invitations via la commande `/invite create`, contrôlée par les rôles staff.
+
+---
+
+---
 
 ## 🧩 Modèle de données simplifié
 
