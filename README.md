@@ -28,7 +28,7 @@ Cette version cherche à répondre à un besoin **essentiel et concret** :
 ### Fonctionnalités incluses :
 - Connexion via **Discord OAuth2** (pas de mot de passe à créer).  
 - **Profil joueur** avec :
-  - photo de profil (avatar Discord ou image par défaut homme/femme),  
+  - photo de profil,
   - bio et deck préféré,  
   - barre d’XP et niveau,  
   - ratio victoires/défaites.  
